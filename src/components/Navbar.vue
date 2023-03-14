@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/">
+    <router-link to="/" class="logo-container">
       <img class="logo" src="@/assets/logo.svg" alt="Logo">
     </router-link>
     <div class="routes">
@@ -21,23 +21,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
-    padding: 0 20px;
+    height: 4rem;
+    padding: 0 1.5rem;
     background: #282830;
     color: #737380;
+
+    .logo-container {
+      height: 1.5rem;
+
+      .logo {
+        height: 100%;
+      }
+    }
     
-    a {
-      color: #737380;
-      text-decoration: none;
-    }
-
-    .logo {
-      height: 20px;
-    }
-
     .routes {
       display: flex;
       gap: 15px;
+    
+      a {
+        color: #737380;
+        text-decoration: none;
+        font-size: 14px;
+
+        &.router-link-active {
+          color: #F6F6F6;
+        }
+      }
     }
   }
 </style>
