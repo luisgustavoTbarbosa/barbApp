@@ -1,11 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Navbar />
   <router-view/>
 </template>
 
-<style lang="scss">
+<script>
+  import Navbar from '@/components/Navbar.vue'
 
+  export default {
+    components: {
+      Navbar
+    }
+  }
+</script>
+
+<style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+  }
 </style>
