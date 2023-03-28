@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     height: 4rem;
-    padding: 0 1.5rem;
+    padding: 0 2.2rem;
     background: #282830;
     color: #737380;
 
