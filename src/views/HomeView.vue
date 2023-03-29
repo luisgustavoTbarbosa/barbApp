@@ -6,7 +6,7 @@
     <div class="content">
       <h1>O melhor app para o seu negócio</h1>
       <p>Gerencie os seus horários, clientes e ganhos.</p>
-      <button>Iniciar boost</button>
+      <router-link to="/login" class="button-init-boost">Iniciar boost</router-link>
     </div>
   </main>
 </template>
@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
   main {
-    height: 100vh;
+    height: calc(100vh - 4rem);
     background: #19191C;
   }
 
@@ -48,7 +48,10 @@
       font-size: 1rem;
     }
 
-    button {
+    .button-init-boost {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 13rem;
       height: 2.5rem;
       background: linear-gradient(180deg, #C086D2 0%, #A769D8 14.58%, #7028E4 68.23%);
@@ -56,6 +59,7 @@
       border-radius: 5px;
       color: #F6F6F6;
       font-size: 1rem;
+      text-decoration: none;
       cursor: pointer;
     }
   }
