@@ -4,7 +4,7 @@
       <img class="logo" src="@/assets/logo.svg" alt="Logo">
     </router-link>
     <div class="routes">
-      <router-link to="/login">Login</router-link>
+      <router-link to="/login" class="loginLink">Login</router-link>
       <router-link to="/signup">Cadastro</router-link>
     </div>
   </nav>
@@ -21,10 +21,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     height: 4rem;
     padding: 0 2.2rem;
     background: #282830;
     color: #737380;
+
+    &:has(.loginLink.router-link-active) {
+      position: fixed;
+    }
 
     .logo-container {
       height: 1.5rem;

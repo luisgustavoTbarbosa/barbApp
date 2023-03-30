@@ -1,9 +1,7 @@
 <template>
   <main>
     <img class="logo" src="@/assets/logo.svg" alt="Logo">
-
     <h1>Login</h1>
-
     <div class="login-container">
       <label for="inputMail">Seu e-mail</label>
       <input id="inputMail" type="email" placeholder="joseph@gmail.com">
@@ -11,7 +9,6 @@
       <input id="inputPassword" type="password" placeholder="JskdX2#">
       <button>Entrar</button>
     </div>
-
     <p>Ainda não possui uma conta? <router-link to="/signup" class="signup">Cadastre-se</router-link></p>
   </main>
 </template>
@@ -29,7 +26,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 2.2rem;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     background: #19191C;
 
     .logo {
