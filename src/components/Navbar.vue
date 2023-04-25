@@ -5,7 +5,7 @@
     </router-link>
     <div class="routes">
       <router-link to="/login" class="loginLink">Login</router-link>
-      <router-link to="/signup">Cadastro</router-link>
+      <router-link to="/signup" class="singUpLink">Cadastro</router-link>
     </div>
   </nav>
 </template>
@@ -27,7 +27,8 @@
     background: #282830;
     color: #737380;
 
-    &:has(.loginLink.router-link-active) {
+    &:has(.loginLink.router-link-active),
+    &:has(.singUpLink.router-link-active) {
       position: fixed;
     }
 

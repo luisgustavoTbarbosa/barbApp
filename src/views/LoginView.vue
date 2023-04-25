@@ -2,13 +2,13 @@
   <main>
     <img class="logo" src="@/assets/logo.svg" alt="Logo">
     <h1>Login</h1>
-    <div class="login-container">
+    <form class="login-container" action="/login" method="post">
       <label for="inputMail">Seu e-mail</label>
       <input id="inputMail" type="email" placeholder="joseph@gmail.com">
       <label for="inputPassword" class="labelPassword">Sua senha</label>
       <input id="inputPassword" type="password" placeholder="JskdX2#">
       <button>Entrar</button>
-    </div>
+    </form>
     <p>Ainda não possui uma conta? <router-link to="/signup" class="signup">Cadastre-se</router-link></p>
   </main>
 </template>
@@ -25,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2.2rem;
+    padding: 0 2.2rem; 
     height: 100vh;
     background: #19191C;
 
