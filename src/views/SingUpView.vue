@@ -15,11 +15,32 @@
       </section>
       
       <section v-show="this.count === 1">
-        testeeee
+        <label for="inputBusinessName">Nome do seu negócio</label>
+        <input id="inputBusinessName" type="text" placeholder="João estética e barba masculina">
+
+        <label for="inputPhone">Telefone</label>
+        <input id="inputPhone" type="tel" placeholder="(11) 999999999">
+
+        <label for="inputPhoto">Foto de perfil</label>
+        <input id="inputPhoto" type="url" placeholder="URL da foto"> 
+      </section>
+
+      <section v-show="this.count === 2" class="containerDays">
+        <p>Quais dias da semana você trabalha?</p>
+
+        <div>
+          <div class="nameDays">Segunda-feira</div>
+          <div class="nameDays">Terça-feira</div>
+          <div class="nameDays">Quarta-feira</div>
+          <div class="nameDays">Quinta-feira</div>
+          <div class="nameDays">Sexta-feira</div>
+          <div class="nameDays">Sábado</div>
+          <div class="nameDays">Domingo</div>
+        </div>
       </section>
 
       <div class="controls">
-        <button
+        <button  
           v-show="this.count > 0"
           class="backButton"
           type="button"
@@ -28,7 +49,7 @@
           Voltar
         </button>
         <button
-          v-show="this.count < 2"
+          v-show="this.count < 3"
           type="button"
           class="nextButton"
           @click="countingStepsRegistration"
@@ -45,7 +66,7 @@
     name: 'SingUpView',
     data() {
       return {
-        count: 0
+        count: 2
       }
     },
     methods: {
@@ -139,6 +160,27 @@
 
       label + input {
         margin-bottom: 1.8rem;
+      }
+
+      .containerDays {
+        p {
+          color: #F6F6F6;
+          font-size: 1rem;
+        }
+
+        > div {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        }
+      }
+
+      .nameDays {
+        background: #737380;
+        padding: 0.5rem;
+        border-radius: 6px;
       }
 
       .controls {
