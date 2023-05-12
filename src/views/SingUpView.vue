@@ -39,6 +39,20 @@
         </div>
       </section>
 
+      <section v-show="this.count === 3">
+        <div class="timeRegistration">
+          <label for="inputTime">Cadastre seus horários</label>
+          <input type="time" id="inputTime">
+          <button>Adicionar horário</button>
+        </div>
+        <div class="timeSection">
+          <p>Você ainda não adicionou nenhum horário</p>
+          <div class="">
+
+          </div>
+        </div>
+      </section>
+
       <div class="controls">
         <button  
           v-show="this.count > 0"
@@ -56,7 +70,14 @@
         >
           Próximo
         </button>
-    </div>
+        <button
+          v-show="this.count === 3"
+          type="button"
+          class="submitButton"
+        >
+          Concluir
+        </button>
+      </div>
     </form>
   </main>
 </template>
@@ -66,7 +87,7 @@
     name: 'SingUpView',
     data() {
       return {
-        count: 2
+        count: 0
       }
     },
     methods: {
@@ -204,6 +225,50 @@
           &.backButton {
             width: 40%;
           }
+
+          &.submitButton {
+            width: 80%;
+          }
+        }
+      }
+
+      .timeRegistration {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem 1rem;
+        margin-bottom: 2rem;
+
+        label {
+          width: 100%;
+        }
+
+        input {
+          width: 6rem;
+          margin: 0;
+        }
+
+        button {
+          height: 2.2rem;
+          padding: 0 1rem;
+          border: none;
+          border-radius: 4px;
+          background: #6B5FE6;
+          color: #F6F6F6;
+          line-height: 1;
+        }
+      }
+
+      .timeSection {
+        p {
+          margin-bottom: .5rem;
+          color: #F6F6F6;
+          font-size: 1rem;
+        }
+        
+        div {
+          height: 10rem;
+          background: #1D1D1F;
+          border-radius: 4px;
         }
       }
     }
